@@ -10,38 +10,38 @@ Requirements to be installed: Python(i used 3.10.2), MongoDB, Node.js(last versi
 Steps for run the project (Windows):
 
 
-download the project
+- download the project
 
-open the console inside the folder "fly_company-main"
+- open the console inside the folder "fly_company-main"
 
-create a virtual environment -> "python -m venv myvenv"
+- create a virtual environment -> "python -m venv myvenv"
 
-run the virtual environment -> "myvenv\Scripts\activate"
+- run the virtual environment -> "myvenv\Scripts\activate"
 
-install requirements.txt -> "pip install -r requirements.txt"
+- install requirements.txt -> "pip install -r requirements.txt"
 
-"python manage.py makemigrations"
+- "python manage.py makemigrations"
 
-"python manage.py migrate"
+- "python manage.py migrate"
 
-"python manage.py makemigrations app"
+- "python manage.py makemigrations app"
 
-"python manage.py migrate app"
+- "python manage.py migrate app"
 
 
 
 Run the blockchain:
 
-open the console inside the folder "smart_contract";
+- open the console inside the folder "smart_contract";
 
-run the chain with "truffle develop";
+- run the chain with "truffle develop";
 
-deploy the contract with "migrate";
+- deploy the contract with "migrate";
 
-(optional)launch automatic tests "test"
-
-
+- (optional)launch automatic tests "test"
 
 
-run the project -> "python manage.py runserver"
+
+
+- run the project -> "python manage.py runserver"
 
