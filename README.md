@@ -30,7 +30,7 @@ Steps for run the project (Windows):
 
 
 
-Run the blockchain:
+Launch the blockchain:
 
 - open the console inside the folder "smart_contract";
 
@@ -42,6 +42,7 @@ Run the blockchain:
 
 
 
+Final step
 
 - run the project -> "python manage.py runserver"
 
