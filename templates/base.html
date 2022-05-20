@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>F.G. SKY FLY</title>
+  </head>
+  <body>
+    <header>
+      <a href="{% url 'home' %}"><h1>F.G. SKY FLY</h1>
+        <h4>The best company in the world to fly</h4></a>
+      {% if user.is_authenticated %}
+    
+        <a href="{% url 'logout' %}">logout</a>
+      {% else %}
+        <a href="{% url 'login' %}">login</a> / <a href="{% url 'signup' %}">signup</a>
+      {% endif %}
+      <hr>
+      
+    </header>
+    <main>
+      <h4>Welcome {{user.profile.first_name}}</h4>
+
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>

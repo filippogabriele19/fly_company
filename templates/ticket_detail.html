@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+  <h2>Ticket details</h2>
+  <br>
+  <div>
+    - from {{ticket.departure_city}} to {{ticket.arrival_city}}
+    <br>
+    - Price: {{ticket.price}}€
+    <br>
+    - Departure: {{ticket.date_departure}}
+    <br>
+    - Airplane Code: {{ticket.airplane_code}}
+    <br>
+    - Ticket Code: {{ticket.code}}
+    <br>
+    <br>
+    
+    <a href="{% url 'buy_ticket' pk=ticket.pk %}"><input class="btn btn-primary" type="submit" value="Confirm"></a> 
+</div>
+
+{% endblock %}

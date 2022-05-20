@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+  <h2>Profile</h2>
+
+Name: {{profile.first_name}}
+<br>
+Last name: {{profile.last_name}}
+<br>
+
+
+ Bought tickets:
+ {% for ticket in tickets %}
+		<h3>- {{ticket.departure_city}} - {{ticket.arrival_city}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+		<h4> Departure: {{ticket.date_departure}} - Price: {{ticket.price}}€</h4>
+		<br>
+	{% endfor %}
+
+   
+{% endblock %}
