@@ -27,12 +27,8 @@ def update_profile_signal(sender, instance, created, **kwargs):
 
 
 class Ticket(models.Model):
-    customer_name = models.CharField(max_length=15, blank=True)
-    customer_last_name = models.CharField(max_length=15, blank=True)
     date_purchase = models.DateTimeField(auto_now_add=True)
     date_departure = models.DateTimeField()
     departure_city = models.CharField(max_length=15, blank=True)
     arrival_city = models.CharField(max_length=15, blank=True)
     price = models.IntegerField()
-    airplane_code = models.CharField(max_length=5, blank=True)
-    code = models.CharField(max_length=5, blank=True)

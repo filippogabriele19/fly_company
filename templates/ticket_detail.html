@@ -1,24 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
 
 
-
-{% block content %}
+<body>
+  {% block content %}
   <h2>Ticket details</h2>
   <br>
   <div>
     - from {{ticket.departure_city}} to {{ticket.arrival_city}}
     <br>
-    - Price: {{ticket.price}}€
+    - Price: 1 ETH
     <br>
     - Departure: {{ticket.date_departure}}
     <br>
-    - Airplane Code: {{ticket.airplane_code}}
-    <br>
-    - Ticket Code: {{ticket.code}}
     <br>
     <br>
-    
-    <a href="{% url 'buy_ticket' pk=ticket.pk %}"><input class="btn btn-primary" type="submit" value="Confirm"></a> 
-</div>
 
-{% endblock %}
+
+    Payment method:
+    <br>
+    <input id="buy" class="btn btn-primary" type="submit" value="Metamask">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.2/ethers.umd.min.js"
+      integrity="sha512-PtOcu3WZTldHT+VjAJdWV5ss+iGebEgc1h5olJuxUNPvKuC0VOZsk1UhNgQYi5oIyrNHhdIOw8WQMdZwBv1MyQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/ticket_detail.js' %}"></script>
+
+    <a href="{% url 'buy_ticket' pk=ticket.pk %}"><input id="aaaa" class="btn btn-primary" type="submit"
+        value="Test accounts[1]"></a>
+    <br>
+
+  </div>
+
+  {% endblock %}
+
+
+
+</body>

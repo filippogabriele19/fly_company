@@ -2,20 +2,21 @@
 
 
 {% block content %}
-  <h2>Ticket Details</h2>
-  <div>
-    <h4 style="color:red">Purchased from:<h4><h4>{{ticket.customer_name}} {{ticket.customer_last_name}}</h4>
-    - from {{ticket.departure_city}} to {{ticket.arrival_city}}
-    <br>
-    - Price: {{ticket.price}}€
-    <br>
-    - Departure: {{ticket.date_departure}}
-    <br>
-    - Airplane Code: {{ticket.airplane_code}}
-    <br>
-    - Ticket Code: {{ticket.code}}
-    <br>
-    <br>
+<h2>Ticket Details</h2>
+<div>
+  <h4 style="color:red">Purchased from:<h4>
+      <h4>{{ticket.customer_name}} {{ticket.customer_last_name}}</h4>
+      - from {{ticket.departure_city}} to {{ticket.arrival_city}}
+      <br>
+      - Price: {{ticket.price}}€
+      <br>
+      - Departure: {{ticket.date_departure}}
+      <br>
+      - Airplane Code: {{ticket.airplane_code}}
+      <br>
+      - Ticket Code: {{ticket.code}}
+      <br>
+      <br>
 </div>
 
 {% endblock %}

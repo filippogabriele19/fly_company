@@ -5,27 +5,28 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-	<div class="search">
-		<div class="container">
-		<form method="GET" action = "ticket_search/">
-			<h5><label for="fname" style="color:black">Inserisci il codice biglietto: 
-			<div class = "form-group">
-			<input type="text" name = "code" placeholder="XXXX">
-			</div>
-			<input class="btn btn-primary" type="submit" value="Cerca">
+<div class="search">
+	<div class="container">
+		<form method="GET" action="ticket_search/">
+			<h5><label for="fname" style="color:black">Inserisci il codice biglietto:
+					<div class="form-group">
+						<input type="text" name="code" placeholder="XXXX">
+					</div>
+					<input class="btn btn-primary" type="submit" value="Cerca">
 		</form>
-		</div>
 	</div>
-	<h3 style="background-color:gray">{{message}}</h3>
-  
-	<h2 style="color:red">The next flights:<h2>
-	{% for ticket in tickets %}
-		<h3>- {{ticket.departure_city}} - {{ticket.arrival_city}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			<a href="{% url 'ticket_detail' pk=ticket.pk %}">Buy</a></h3> 
-		<h4> Departure: {{ticket.date_departure}} - Price: {{ticket.price}}€</h4>
+</div>
+<h3 style="background-color:gray">{{message}}</h3>
+
+<h2 style="color:red">The next flights:<h2>
+		{% for ticket in tickets %}
+		<h3>- {{ticket.departure_city}} - {{ticket.arrival_city}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="{% url 'ticket_detail' pk=ticket.pk %}">Buy</a>
+		</h3>
+		<h4> Departure: {{ticket.date_departure}} - Price: 1 ether</h4>
 		<br>
-	{% endfor %}
-{% else %}
-  <p>Welcome</p>
-{% endif %}
-{% endblock %}
+		{% endfor %}
+		{% else %}
+		<p>Welcome</p>
+		{% endif %}
+		{% endblock %}

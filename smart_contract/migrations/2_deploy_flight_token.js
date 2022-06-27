@@ -1,5 +1,5 @@
-const FlightToken = artifacts.require("FlightToken");
+const FlightRomeNYNFT = artifacts.require("FlightRomeNYNFT");
 
 module.exports = function (deployer) {
-  deployer.deploy(FlightToken);
+  deployer.deploy(FlightRomeNYNFT);
 };
